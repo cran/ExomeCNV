@@ -3,7 +3,7 @@
 \alias{guesstimate.contarmination}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Estimate admixture/contarmination rate in a sample.
+Estimate admixture/contamination rate in a sample.
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~

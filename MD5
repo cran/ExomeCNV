@@ -1,4 +1,4 @@
-7b2b5685e33eb6d841cad743e8876c8d *DESCRIPTION
+b556e390432265c00f74d9ea92b63252 *DESCRIPTION
 c616f0fa102735e1383d720de898d8f9 *R/CNV.analyze.R
 e8319c744d379f486053c923fde3b01e *R/LOH.analyze.R
 e5acc92a6c1449792dec873f172a87df *R/calculate.logR.R
@@ -30,7 +30,7 @@ d16175e8d22b5b58b6657f36a2608b97 *R/get.r.cutoff.R
 177cddd5cd15ed6a6c5ba0070a5fd060 *R/get.sensitivity.R
 0a762104408d4346fda4dc71db24be7b *R/get.specificity.R
 bcaa590eae176144459570e8f3901195 *R/guesstimate.contamination.R
-0433cc2c949dea7a57bba1e5665289d0 *R/guesstimate.contarmination.R
+25a1214407f91b0cb05db8f9771e7607 *R/guesstimate.contarmination.R
 5487615ca3b313c73c85b0c343a5a9f4 *R/make.chunk.R
 16b1db907d7780daa302b831f43082cb *R/make.loh.chunk.R
 5d67af0891e4d36e74ccee6ba3b2dd51 *R/make.loh.strata.R
@@ -42,6 +42,7 @@ b02d47a6bfd7b88ff274e1a2aa35a4f0 *R/multi.LOH.analyze.R
 408fef3139af40a78aa322f8f750a08d *R/pool.coverage.R
 a5b7da8353d72962896fbefc3349070f *R/pool.coverage.from.files.R
 03a819c63a08076efc1ad9bdbbb249d8 *R/read.all.coverage.R
+4df6c8b6856b69092e568339b544b698 *R/read.coverage.gatk.R
 38fa32c9fd349714f7cb16a5739a8f81 *R/read.coverage.gtf.R
 8d71a3161799d88081e98afcdab6fa45 *R/read.eCNV.R
 f85bb650e122a29625082d34d2042796 *R/read.gtf.R
@@ -75,11 +76,12 @@ b793c43b7f7a912141d6fa2c7c9ad53a *man/combine.CNV.Rd
 405a5f1e24e7ad0efe1be9df0b3db246 *man/do.plot.loh.Rd
 c3ae460f8f4e2b4af44d667d27c40002 *man/expand.loh.Rd
 50b9ce05bb8f1f1a6ef0688cbf0ca5f9 *man/get.AUC.Rd
-e8d3ab57002f0be2be13c4638812c395 *man/guesstimate.contamination.Rd
+a8f7f085447384ae01f9a693bf34aff5 *man/guesstimate.contamination.Rd
 8fb320a79d2247880c06fb6493b28395 *man/multi.CNV.analyze.Rd
 ba0d22a50ad8484d7a3ce1fce9673d01 *man/multi.LOH.analyze.Rd
 229a313c9f8a10f9740152ff138cb13e *man/pool.coverage.Rd
 9b6f55820aaee712be9b7bc62a53eed2 *man/read.all.coverage.Rd
+f4551faf6b7dc9379dd3af67a073c2d4 *man/read.coverage.gatk.Rd
 c760d5f553f871bbd9aa9144adf7e4c5 *man/read.coverage.gtf.Rd
 5ed11e3ec3ec5518ce3ecd9b544fcc53 *man/read.eCNV.Rd
 9ea12ff9ec557b4fde6ebaed981cccce *man/save.logR.Rd
