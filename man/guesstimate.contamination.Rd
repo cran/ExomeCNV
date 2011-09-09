@@ -1,4 +1,5 @@
-\name{guesstimate.contarmination}
+\name{guesstimate.contamination}
+\alias{guesstimate.contamination}
 \alias{guesstimate.contarmination}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
@@ -40,7 +41,7 @@ normal = read.table("http://genome.ucla.edu/~fah/ExomeCNV/data/normal.chr21.cove
 con = url("http://genome.ucla.edu/~fah/ExomeCNV/demo/logR/demo.logR.chr21.RData")
 load(con)
 close(con)
-admix.rate = guesstimate.contarmination( logR=logR, region.idx=(normal$chr == "chr21") )
+admix.rate = guesstimate.contamination( logR=logR, region.idx=(normal$chr == "chr21") )
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
