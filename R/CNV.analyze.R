@@ -16,13 +16,13 @@ function(normal, tumor, logR=NULL, coverage.cutoff=15, normal.chr=c("chr1","chr2
 		segment.smoothed.CNA.obj = segment(smoothed.CNA.obj, undo.splits="sdundo", undo.SD=sdundo, verbose=1, alpha=alpha)
 
 		if (plot.cnv) {
-			if (write.file && !is.null(file)) png(file, width=2000, height=1000, unit="px")
-			else if (write.file) png("CNV detection for exons with > " %+% coverage.cutoff %+% " coverage.png", width=2000, height=1000, unit="px")
+			if (write.file && !is.null(file)) png(file, width=2000, height=1000, units="px")
+			else if (write.file) png("CNV detection for exons with > " %+% coverage.cutoff %+% " coverage.png", width=2000, height=1000, units="px")
 			plot(segment.smoothed.CNA.obj, plot.type="s")
 			if (write.file) dev.off()
 
-			if (write.file && !is.null(file)) png("allchr." %+% file, width=2000, height=1000, unit="px")
-			else if (write.file) png("all chromosome CNV detection for exons with > " %+% coverage.cutoff %+% " coverage.png", width=2000, height=1000, unit="px") else x11()
+			if (write.file && !is.null(file)) png("allchr." %+% file, width=2000, height=1000, units="px")
+			else if (write.file) png("all chromosome CNV detection for exons with > " %+% coverage.cutoff %+% " coverage.png", width=2000, height=1000, units="px") else x11()
 			plot(segment.smoothed.CNA.obj, plot.type="w")
 			abline(h=log2(c + (1-c)*c(1,3,4,5)/2), col="purple")
 			if (write.file) dev.off()
@@ -40,8 +40,8 @@ function(normal, tumor, logR=NULL, coverage.cutoff=15, normal.chr=c("chr1","chr2
 		logR.max = max(norm.log.ratio[well.covered.exon.idx])
 
 		if (plot.cnv) {
-			if (write.file && !is.null(file)) png(file, width=2000, height=1000, unit="px")
-			else if (write.file) png("CNV detection for exons with > " %+% coverage.cutoff %+% " coverage.noDNAcopy.png", width=2000, height=1000, unit="px")
+			if (write.file && !is.null(file)) png(file, width=2000, height=1000, units="px")
+			else if (write.file) png("CNV detection for exons with > " %+% coverage.cutoff %+% " coverage.noDNAcopy.png", width=2000, height=1000, units="px")
 			par(mfrow=c(4,6))
 			for (chr in levels(normal$chr)) {
 				plot((normal$probe_start[well.covered.exon.idx & normal$chr==chr] + normal$probe_end[well.covered.exon.idx & normal$chr==chr])/2, norm.log.ratio[well.covered.exon.idx & normal$chr==chr], pch="*", pc=20, ylim=c(logR.min, logR.max), main=chr, xlab="position", ylab="log ratio")

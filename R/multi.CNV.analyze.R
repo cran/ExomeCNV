@@ -1,5 +1,5 @@
 multi.CNV.analyze <-
-function(normal, tumor, logR=NULL, all.cnv.ls=NULL, coverage.cutoff=10, c=0.3, l=70, sdundo=c(1,2), alpha=c(0.05,0.01), 
+function(normal, tumor, logR=NULL, all.cnv.ls=NULL, coverage.cutoff=10, admix=0.3, c=admix, read.len=70, l=read.len, sdundo=c(1,2), alpha=c(0.05,0.01), 
 			     min.spec=0.99, min.sens=0.9, option="auc") {
 	stopifnot(length(sdundo) == length(alpha))
 	if (is.null(all.cnv.ls)) { all.cnv.ls = list() }

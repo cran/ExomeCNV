@@ -14,6 +14,7 @@ function(normal, tumor, method, smooth=FALSE, sdundo=1, alpha=0.01) {
 	segment.obj = segment(smoothed.CNA.obj, undo.splits="sdundo", undo.SD=sdundo, verbose=1, alpha=alpha)
 	segment.output = segment.obj$output
 
+	data(chr.hash)
 	cna.normal = data.frame(chr = chr.hash[segment.output$chrom,1],
 				  position = segment.output$loc.start,
 				  end.position = segment.output$loc.end,

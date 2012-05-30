@@ -10,12 +10,13 @@ Calculate specificity and sensitivity (power) of detecting CNV based on depth of
 }
 \usage{
 classify.eCNV(normal, tumor, logR = NULL, min.spec = 0.9, min.sens = 0.9, 
-	      option = "auc", c = 0.3, l = 70, normal.chrs = c("chr1",
+	      option = "auc", admix = 0.3, c = admix, read.len = 70,
+	      l = read.len, normal.chrs = c("chr1",
 	     "chr2","chr3","chr4","chr5","chr6","chr7","chr8",
 	     "chr9","chr10","chr11","chr12","chr13","chr14",
 	     "chr15","chr16","chr17","chr18","chr19","chr20",
 	     "chr21","chr22","chrX","chrY"),
-	     test.num.copy = c(1,3,4,5))
+	     test.num.copy = c(1,3))
 }
 \arguments{
   \item{normal}{
@@ -36,11 +37,17 @@ desired minimum sensitivity (power).
   \item{option}{
 objective quantity to optimize over when minimum sensitivity and specificity are achieved. Possible opetions are \code{sens} for sensitivity, \code{spec} for specificity, \code{auc} for area under curve = (specificity + sensitivity)/2.
 }
-  \item{c}{
+  \item{admix}{
 contamination rate (admixture rate), the proportion of the normal cells in the tumor samples.
 }
-  \item{l}{
+  \item{c}{
+(depreciated) same as \code{admix}
+}
+  \item{read.len}{
 sequence read length.
+}
+  \item{l}{
+(depreciated) same as \code{read.len}
 }
   \item{normal.chrs}{
 a vector of strings indicating chromosomes that are believed to have normal copy numbers. Default to whole genome.

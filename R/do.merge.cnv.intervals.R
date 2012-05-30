@@ -1,5 +1,6 @@
 do.merge.cnv.intervals <-
 function(the.cnv) {
+	if (nrow(the.cnv) == 1) return (the.cnv) # new in ExomeCNV 1.3
 	new.cnv = c()
 	cur.chr = the.cnv$chr[1]
 	cur.logR = the.cnv$logR[1]

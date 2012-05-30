@@ -1,5 +1,5 @@
 classify.eCNV <-
-function(normal, tumor, logR=NULL, min.spec=0.9, min.sens=0.9, option="auc", c=0.3, l=70, normal.chrs = c("chr1","chr2","chr3","chr4","chr5","chr6","chr7","chr8","chr9","chr10","chr11","chr12","chr13","chr14","chr15","chr16","chr17","chr18","chr19","chr20","chr21","chr22","chrX","chrY"),test.num.copy=c(1,3,4,5)) {
+function(normal, tumor, logR=NULL, min.spec=0.9, min.sens=0.9, option="auc", admix=0.3, c=admix, read.len=70, l=read.len, normal.chrs = c("chr1","chr2","chr3","chr4","chr5","chr6","chr7","chr8","chr9","chr10","chr11","chr12","chr13","chr14","chr15","chr16","chr17","chr18","chr19","chr20","chr21","chr22","chrX","chrY"),test.num.copy=c(1,3)) {
 	`%+%` <- function(x,y) paste(x,y,sep="")
 	print("analyzing eCNV with min.spec " %+% min.spec %+% " and min.sens " %+% min.sens %+% " and option to maximize " %+% option)
 

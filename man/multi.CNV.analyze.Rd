@@ -11,8 +11,8 @@ A list of other finer CNV interval may be supplied in \code{all.cnv.ls}.  Finall
 }
 \usage{
 multi.CNV.analyze(normal, tumor, logR = NULL, all.cnv.ls = NULL, 
-		  coverage.cutoff = 10, c = 0.3, l = 70, 
-		  sdundo = c(1, 2), alpha = c(0.05, 0.01), 
+		  coverage.cutoff = 10, admix = 0.3, c = admix, read.len = 70, 
+		  l = read.len, sdundo = c(1, 2), alpha = c(0.05, 0.01), 
 		  min.spec = 0.99, min.sens = 0.9, option = "auc")
 }
 %- maybe also 'usage' for other objects documented here.
@@ -37,13 +37,17 @@ a list of other finer CNV interval (usually the outputs of \code{classify.eCNV})
 %%     ~~Describe \code{coverage.cutoff} here~~
 a number to use as a cutoff for minimum average coverage that should be considered. If this minimum coverage is not met, CNV will not be called for that segment.
 }
-  \item{c}{
-%%     ~~Describe \code{c} here~~
+  \item{admix}{
 contamination rate (admixture rate), the proportion of the normal cells in the tumor samples.
 }
-  \item{l}{
-%%     ~~Describe \code{l} here~~
+  \item{c}{
+(depreciated) same as \code{admix}
+}
+  \item{read.len}{
 sequence read length.
+}
+  \item{l}{
+(depreciated) same as \code{read.len}
 }
   \item{sdundo}{
 %%     ~~Describe \code{sdundo} here~~

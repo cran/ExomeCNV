@@ -67,9 +67,10 @@ prefix = "http://genome.ucla.edu/~fah/ExomeCNV/data/tumor."
 tumor = read.all.coverage(prefix, suffix, chr.list, header=TRUE)
 demo.logR = calculate.logR(normal, tumor)
 
-demo.cnv = multi.CNV.analyze(normal, tumor, logR=demo.logR, all.cnv.ls=list(demo.eCNV), 
+## The following will take a while to run (~3-5 mins)
+demo.cnv = multi.CNV.analyze(normal, tumor, logR=demo.logR, all.cnv.ls=NULL,
 			coverage.cutoff=5, min.spec=0.99, min.sens=0.99, option="auc", 
-			c=0.5, sdundo=c(1,2), alpha=c(0.01,0.01))
+			c=0.5, sdundo=c(2), alpha=c(0.01))
 do.plot.eCNV(demo.cnv, lim.quantile=0.99, style="bp", bg.cnv=demo.eCNV, line.plot=TRUE)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
