@@ -1,10 +1,10 @@
-2699eb0d07cb6bdbd0e61ae99b44096d *DESCRIPTION
+f088c027e12afd56ee3884ef6f33b7b0 *DESCRIPTION
 366e608745aa8ff3c5e0d359ab7b544d *NAMESPACE
-940c2503b70179f38162e8324f70d0cd *R/CNV.analyze.R
+e6ad271617499eaa7fc638f9d508d8ad *R/CNV.analyze.R
 e8319c744d379f486053c923fde3b01e *R/LOH.analyze.R
 e5acc92a6c1449792dec873f172a87df *R/calculate.logR.R
 5354b455590a12abcc933f976dbf5357 *R/chr.median.R
-a7d484ef56f2967c78f615a7b4aede54 *R/classify.eCNV.R
+bd8b5217455d962516ad08d7d4a1ea53 *R/classify.eCNV.R
 1cdacaa5c1c460a4b97d8fcb6c57064c *R/classify.logR.R
 e54a0c3fe9c8f113c626a4f6d4784835 *R/cnv.points.R
 74288fafdfb6cc25efb74b67c0f934e9 *R/combine.CNV.R
@@ -66,7 +66,7 @@ dca92c18adf5a62b0b0da6915db4ca70 *data/my.cols.rda
 203a1be71c0ba4555b779633f17ceebd *data/rho.list.rda
 c9acdf18cb00889d7443bfc89bccb880 *data/test.num.copy.rda
 63b8bba7821ff161e143b15fdc8d7bc0 *data/window.sizes.rda
-bea3ce5ea674cbd3668c32e686441cc9 *man/CNV.analyze.Rd
+36cd66e4a2e3792a90ca28c66d7b00e9 *man/CNV.analyze.Rd
 2f882c7b07d52743aa2f5bcd39242339 *man/ExomeCNV-package.Rd
 f13562734723e4e73df70b3b59f114ad *man/LOH.analyze.Rd
 c20eb300f9f706f3c44c97aacc0142ef *man/calculate.logR.Rd
@@ -82,8 +82,8 @@ a8f7f085447384ae01f9a693bf34aff5 *man/guesstimate.contamination.Rd
 9034272292ed8fb5aa90563d8d83db89 *man/multi.CNV.analyze.Rd
 ba0d22a50ad8484d7a3ce1fce9673d01 *man/multi.LOH.analyze.Rd
 229a313c9f8a10f9740152ff138cb13e *man/pool.coverage.Rd
-9b6f55820aaee712be9b7bc62a53eed2 *man/read.all.coverage.Rd
-f4551faf6b7dc9379dd3af67a073c2d4 *man/read.coverage.gatk.Rd
+2aa11fc5a00f8a311efea04f9a86c17b *man/read.all.coverage.Rd
+d944bb402db31e72788734bef80e6c17 *man/read.coverage.gatk.Rd
 c760d5f553f871bbd9aa9144adf7e4c5 *man/read.coverage.gtf.Rd
 5ed11e3ec3ec5518ce3ecd9b544fcc53 *man/read.eCNV.Rd
 9ea12ff9ec557b4fde6ebaed981cccce *man/save.logR.Rd

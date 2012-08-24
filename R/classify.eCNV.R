@@ -1,9 +1,11 @@
 classify.eCNV <-
 function(normal, tumor, logR=NULL, min.spec=0.9, min.sens=0.9, option="auc", admix=0.3, c=admix, read.len=70, l=read.len, normal.chrs = c("chr1","chr2","chr3","chr4","chr5","chr6","chr7","chr8","chr9","chr10","chr11","chr12","chr13","chr14","chr15","chr16","chr17","chr18","chr19","chr20","chr21","chr22","chrX","chrY"),test.num.copy=c(1,3)) {
 	`%+%` <- function(x,y) paste(x,y,sep="")
+	normal.chrs = intersect(levels(normal$chr), normal.chrs)
 	print("analyzing eCNV with min.spec " %+% min.spec %+% " and min.sens " %+% min.sens %+% " and option to maximize " %+% option)
 
 	covered.exon = (normal$average.coverage > 0 & tumor$average.coverage > 0)
+	covered.exon[is.na(covered.exon)] = FALSE
 	norm.log.ratio = if (is.null(logR)) { calculate.logR(normal, tumor, normal.chrs) } else { logR }
 
 	eCNV = normal[,c("probe", "chr", "probe_start", "probe_end", "coverage", "average.coverage", "targeted.base")]

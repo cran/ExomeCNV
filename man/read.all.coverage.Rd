@@ -31,7 +31,7 @@ Suffix of the file name, particularly the part following "chr#". See \code{prefi
 }
   \item{chr.list}{
 %%     ~~Describe \code{chr.list} here~~
-A vector of chromosome names in the exome. Should be of format "chr#" where # is the chromosome number.
+A vector of chromosome names in the exome. Should be of format "chr#" where # is the chromosome number. This is assuming that the coverage files are broken up by chromosomes, one file per chromosome. If all chromosomes are contained in one file, set \code{chr.list=c("")} and modify prefix/suffix so that they concatenate into the right filename.
 }
   \item{header}{
 %%     ~~Describe \code{header} here~~

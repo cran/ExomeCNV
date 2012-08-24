@@ -8,6 +8,8 @@ Read coverage file produced by The Genome Analysis Toolkit (GATK).
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 Read coverage file produced by The Genome Analysis Toolkit (GATK; http://www.broadinstitute.org/gsa/wiki/index.php/The_Genome_Analysis_Toolkit) and reformat it to be usable by ExomeCNV.
 For exact command to produce the coverage file, see https://secure.genome.ucla.edu/index.php?title=ExomeCNV_User_Guide#GATK_DepthOfCoverage.
+The only three important columns are in the GATK-generated file are: Target, total_coverage, and average_coverage.
+Note that it is okay that the last column of the resulting data.frame is "NA".
 }
 \usage{
 read.coverage.gatk(file)

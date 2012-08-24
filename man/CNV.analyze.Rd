@@ -10,13 +10,13 @@ Preprocess the data and run DNAcopy (to do Circular Binary Segmentation). It als
 }
 \usage{
 CNV.analyze(normal, tumor, logR = NULL, coverage.cutoff = 15,
-                 normal.chr = c("chr1", "chr2", "chr3", "chr4", "chr5",
+                 normal.chrs = c("chr1", "chr2", "chr3", "chr4", "chr5",
                  "chr6", "chr7", "chr8", "chr9", "chr10", "chr11",
                  "chr12", "chr13", "chr14", "chr15", "chr16", "chr17",
                  "chr18", "chr19", "chr20", "chr21", "chr22", "chrX",
-                 "chrY"), c = 0.5, write.file = FALSE, file = NULL,
-                 doDNAcopy = TRUE, sdundo = 1, smooth = TRUE, alpha =
-                 0.01, plot.cnv = TRUE)
+                 "chrY"), normal.chr = normal.chrs, c = 0.5, write.file = FALSE, 
+                 file = NULL, doDNAcopy = TRUE, sdundo = 1, smooth = TRUE, 
+                 alpha = 0.01, plot.cnv = TRUE)
 }
 \arguments{
   \item{normal}{
@@ -35,9 +35,13 @@ a vector of log ratio as calculated by \code{calculate.logR}.
 %%     ~~Describe \code{coverage.cutoff} here~~
 a hard cutoff to exclude exons with low depth of coverage from consideration.
 }
+  \item{normal.chrs}{
+%%     ~~Describe \code{normal.chrs} here~~
+a vector of strings indicating chromosomes that are believed to have normal copy numbers. Default to whole genome.
+}
   \item{normal.chr}{
 %%     ~~Describe \code{normal.chr} here~~
-a vector of strings indicating chromosomes that are believed to have normal copy numbers. Default to whole genome.
+degenerous. same as \code{normal.chrs} above.
 }
   \item{c}{
 %%     ~~Describe \code{c} here~~
@@ -119,7 +123,7 @@ con = url("http://genome.ucla.edu/~fah/ExomeCNV/demo/logR/demo.small.logR.chr19.
 load(con)
 close(con)
 cnv = CNV.analyze(normal, tumor, logR = logR, coverage.cutoff = 15, 
-		normal.chr = row.names(chr.hash), c = 0.5, write.file = FALSE, 
+		normal.chrs = row.names(chr.hash), c = 0.5, write.file = FALSE, 
 		file = NULL, doDNAcopy = TRUE, sdundo = 1, smooth = TRUE, 
 		alpha = 0.01, plot.cnv = TRUE)
 }
